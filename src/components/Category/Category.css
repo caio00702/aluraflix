@@ -1,0 +1,19 @@
+.category {
+    margin: 20px;
+}
+
+.category h2 {
+    color: #fff;
+}
+
+.category-videos {
+    display: flex;
+    gap: 10px;
+}
+
+.video-card {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
