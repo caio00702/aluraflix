@@ -1,39 +1,17 @@
-import React from "react";
-import "./Category.css";
+import React from 'react';
+import VideoCard from '../VideoCard/VideoCard';
 
-function Category({ title }) {
-  const videos = [
-    {
-      id: 1,
-      title: "Video 1",
-      thumbnail: "https://via.placeholder.com/150",
-    },
-    {
-      id: 2,
-      title: "Video 2",
-      thumbnail: "https://via.placeholder.com/150",
-    },
-    {
-      id: 3,
-      title: "Video 3",
-      thumbnail: "https://via.placeholder.com/150",
-    },
-  ];
-
+const Category = ({ title, videos, onUpdate, onDelete }) => {
   return (
     <div className="category">
-      <h2> {title} </h2>
-      <div className="category-videos">
-        {" "}
-        {videos.map((video) => (
-          <div key={video.id} className="video-card">
-            <img src={video.thumbnail} alt={video.title} />
-            <h3> {video.title} </h3>
-          </div>
+      <h2>{title}</h2>
+      <div className="video-list">
+        {videos.map(video => (
+          <VideoCard key={video.id} video={video} onUpdate={onUpdate} onDelete={onDelete} />
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Category;

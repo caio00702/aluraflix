@@ -1,12 +1,11 @@
-import React from "react";
-import "./Footer.css";
+import React from 'react';
 
-function Footer() {
-    return (
-        <footer className="footer">
-            <p> & copy; 2024 AluraFlix.Todos os direitos reservados. </p>
-        </footer>
-    );
-}
+const Footer = () => {
+  return (
+    <footer>
+      <img src="logo.png" alt="Logotipo" />
+    </footer>
+  );
+};
 
 export default Footer;
